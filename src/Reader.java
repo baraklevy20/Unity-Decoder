@@ -3,6 +3,7 @@ import java.io.IOException;
 
 import tools.HexTools;
 import tools.input.ExtendedByteBuffer;
+import unity.UnityFile;
 
 public class Reader {
 	ExtendedByteBuffer buffer;
@@ -14,6 +15,6 @@ public class Reader {
 	public Reader(File file) throws IOException {
 		buffer = new ExtendedByteBuffer(file);
 		
-		HexTools.printHexArray(buffer.peekNext(40));
+		UnityFile unityFile = new UnityFile(buffer);
 	}
 }

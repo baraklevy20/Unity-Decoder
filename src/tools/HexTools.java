@@ -12,7 +12,7 @@ public class HexTools {
 	}
 	
 	public static String byteToHexString(byte b) {
-		String result = Integer.toHexString(b).toUpperCase();
+		String result = Integer.toHexString(b & 0xFF).toUpperCase();
 		return result.length() == 1 ? "0" + result : result;
 	}
 }
